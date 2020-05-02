@@ -24,6 +24,8 @@ BROKEN:
 4) Keyboard backlight and fn keys.
 5) Intel Wifi doesnt work. There is some progress in getting it to work.
 
+Important Note: You CAN NOT install directly to PM981. Create a VM and install macOS to a disk. Backup and restore the disk to PM981 and boot macOS.
+
 Please note: This still work in progress. There are still few things that don't work properly. They will be fixed over time.
 
 Please feel free to test stuff.
