@@ -17,6 +17,12 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 | Wireless Card       | Intel Dual Band Wireless-AC 8265                 |
 | Bluetooth Card      | Intel Bluetooth 8265                             |
 
+## Update(23/07):
+1) Update Intel Bluetooth Kext to fix sleep issues.
+2) Removed everything not needed to boot.
+3) Update Intel Wifi Kext.
+4) Add CFG Unlock guide.
+
 ## Update(13/06):
 1) SMBios to MacbookPro16,3. i7-8557U is the closed to 8550U architecturally.
 2) OC 0.5.9 update.
@@ -28,6 +34,11 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 
 ## BROKEN:
 Nothing actually. Airdrop and Continuty don't work due to unsupported hardware.
+
+## Unlock CFG Lock(BIOS 304):
+Note: This works only on Asus Zenbook UX391 Bios version 304. If you have any other model use this [Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+1) Open modGRUBShell.efi
+2) Type `setup_var 0x562 0x00`
 
 ## PM981:
 1) You can not install macOS directly. You will need to create a VM and install macOS to a disk. Backup and restore the disk to PM981.
@@ -45,19 +56,9 @@ The drive reviews that you will find online are for Phison’s E12 NVMe controll
 
 ## Intel Wi-Fi AC 8265:
 1) Works but slow(approx 40 Mbps up/down).
-2) Need to edit the `itlwm.kext/Contents/Info.plist`
-```
-<key>WiFi_1</key>
-<dict>
-  <key>password</key>
-  <string>Wifi passowrd</string>
-  <key>ssid</key>
-  <string>Wifi SSID</string>
-</dict>
-```
-3) Once edited place it in `EFI/OC/Kexts`
+2) Use HeliPort to connect to Wi-Fi.
 
-More info at: [itlwm](https://github.com/zxystd/itlwm)
+More info at: [OpenIntelWireless](https://github.com/OpenIntelWireless)
 
 ## FN Keys:
 Using AsusSMC we are able to get all the FN keys working. Due to lack of 2 buttons to control Keyboard brightness, we sacrifice the F6 for lowering KB backlight. F7 remains to increase the backlight.
