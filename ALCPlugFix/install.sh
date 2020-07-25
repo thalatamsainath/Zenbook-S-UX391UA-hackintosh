@@ -6,7 +6,7 @@ DAEMON_FILE=good.win.ALCPlugFix.plist
 VERB_FILE=hda-verb
 FIX_FILE=ALCPlugFix
 
-echo "Installing ALCPlugFix v1.7"
+echo "Installing ALCPlugFix v1.6"
 
 # check if the directory "usr/local/bin" exist, if not then create the directory
 
