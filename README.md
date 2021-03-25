@@ -17,6 +17,11 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 | Wireless Card       | Intel Dual Band Wireless-AC 8265                 |
 | Bluetooth Card      | Intel Bluetooth 8265                             |
 
+## Update(25/03):
+1) Update kext to latest stable.
+2) OC 0.6.7
+3) Added battery-performance optimisation.
+4) Fix offset for Core(OP).
 
 ## Update(26/08):
 1) Update kext to latest beta.
@@ -24,22 +29,13 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 3) Fix Colour banding.
 4) Broke Keyboard backlight(will be fixed).
 5) Intel wifi now supported through settings(like native).
-6) Hand-off and other continuity features should work. Note: Airdrop still doesn't work. 
-
-## Update(26/08):
-Big Sur branch(Tested Beta 5)
-1) Update kext to latest beta.
-2) OC 0.6.1
-3) Removed CPU friend(No benefit honestly).
-4) Removed VoltageShift as undervolting can be done using modGRUBShell.efi
-5) Removed all Thunderbolt related kexts and drivers as this too can be handled at BIOS level.
+6) Hand-off and other continuity features should work. Note: Airdrop still doesn't work.
 
 ## BROKEN:
 1) Airdrop
-2) Keyboard backlight
 
-## Unlock CFG Lock(BIOS 304):
-Note: This works only on Asus Zenbook UX391 Bios version 304. If you have any other model use this [Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
+## Unlock CFG Lock(BIOS 304/307):
+Note: This works only on Asus Zenbook UX391 Bios version 304/307. If you have any other model use this [Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
 1) Open modGRUBShell.efi
 2) Type `setup_var 0x562 0x00`
 
@@ -56,7 +52,7 @@ The drive reviews that you will find online are for Phison’s E12 NVMe controll
 2) Due to lack of Thunderbolt devices I haven't completely able to test it.
 
 ## Intel Wi-Fi AC 8265:
-1) Works but slow(approx 40 Mbps up/down).
+1) 2.4Ghz(40Mhz) working. Wifi-ac still not working.
 
 More info at: [OpenIntelWireless](https://github.com/OpenIntelWireless)
 
@@ -67,7 +63,7 @@ Using AsusSMC we are able to get all the FN keys working. Due to lack of 2 butto
 Needed for 3.5mm Aux to work post sleep. Install by running `./install.sh`
 
 ## Advanced Users only(If you brick your device please do not ask me, do only if you know what you are doing):
-BIOS 304 offsets for setup_var
+BIOS 304/307 offsets for setup_var
 
 |Detail	             |Var location|Value|Default|
 | :--- | :---|:---|:---|
@@ -76,13 +72,13 @@ BIOS 304 offsets for setup_var
 |BIOS Lock	          |0x95F|0x00|0x01|
 |Overclock feature	  |0x6D1|0x01|0x00|
 |Core(VO)	            |0x6D7|0x4B (-75mv)|0x00|
-|Core(OP)(-ve)	      |0x6D1|0x01|0x00|
+|Core(OP)(-ve)	      |0x6D9|0x01|0x00|
 |unCore(VO)	          |0x90A|0x4B (-75mv)|0x00|
 |unCore(OP)(-ve)	    |0x90C|0x01|0x00|
 |GT(VO)	              |0x912|0x32 (-50mv)|0x00|
 |GT(OP)(-ve)	        |0x914|0x01|0x00|
 |GPIO3 ForcePwr	      |0x456|0x01|0x00|
 |TB Security Level	  |0x459|0x00|0x01|
-
+|Thunderbolt(TM) Support	  |0x448|0x02|0x01|
 
 Please feel free to test stuff.
