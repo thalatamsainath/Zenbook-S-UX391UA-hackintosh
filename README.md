@@ -17,6 +17,13 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 | Wireless Card       | Intel Dual Band Wireless-AC 8265                 |
 | Bluetooth Card      | Intel Bluetooth 8265                             |
 
+
+## Update(25/03):
+1) Update kext to latest stable.
+2) OC 0.7.0
+3) F6 now disables trackpad and F7 cycles through brightness.
+4) Moved from DSDT to Modular ACPI patches(Should help more people get Hackintosh working).
+
 ## Update(25/03):
 1) Update kext to latest stable.
 2) OC 0.6.7
@@ -55,9 +62,6 @@ The drive reviews that you will find online are for Phison’s E12 NVMe controll
 1) 2.4Ghz(40Mhz) working. Wifi-ac still not working.
 
 More info at: [OpenIntelWireless](https://github.com/OpenIntelWireless)
-
-## FN Keys:
-Using AsusSMC we are able to get all the FN keys working. Due to lack of 2 buttons to control Keyboard brightness, we sacrifice the F6 for lowering KB backlight. F7 remains to increase the backlight.
 
 ## ALCPlugFix:
 Needed for 3.5mm Aux to work post sleep. Install by running `./install.sh`
