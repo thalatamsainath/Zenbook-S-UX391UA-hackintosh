@@ -18,7 +18,7 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 | Bluetooth Card      | Intel Bluetooth 8265                             |
 
 
-## Update(25/03):
+## Update(16/06):
 1) Update kext to latest stable.
 2) OC 0.7.0
 3) F6 now disables trackpad and F7 cycles through brightness.
@@ -29,14 +29,6 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 2) OC 0.6.7
 3) Added battery-performance optimisation.
 4) Fix offset for Core(OP).
-
-## Update(26/08):
-1) Update kext to latest beta.
-2) OC 0.6.2
-3) Fix Colour banding.
-4) Broke Keyboard backlight(will be fixed).
-5) Intel wifi now supported through settings(like native).
-6) Hand-off and other continuity features should work. Note: Airdrop still doesn't work.
 
 ## BROKEN:
 1) Airdrop
@@ -58,8 +50,6 @@ The drive reviews that you will find online are for Phison’s E12 NVMe controll
 1) The thunderbolt port works when any USB 3.0 plugged into it or by plugging in the Asus Type-C dock at the boot time.
 2) Due to lack of Thunderbolt devices I haven't completely able to test it.
 
-## Intel Wi-Fi AC 8265:
-1) 2.4Ghz(40Mhz) working. Wifi-ac still not working.
 
 More info at: [OpenIntelWireless](https://github.com/OpenIntelWireless)
 
