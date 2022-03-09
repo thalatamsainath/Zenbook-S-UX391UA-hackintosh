@@ -17,6 +17,10 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 | Wireless Card       | Intel Dual Band Wireless-AC 8265                 |
 | Bluetooth Card      | Intel Bluetooth 8265                             |
 
+## Update(16/06):
+1) Boots Monterey.
+2) Update kext to latest stable.
+3) OC 0.7.9
 
 ## Update(16/06):
 1) Update kext to latest stable.
@@ -24,14 +28,10 @@ Asus Zenbook S UX391UA Hackintosh using OpenCore
 3) F6 now disables trackpad and F7 cycles through brightness.
 4) Moved from DSDT to Modular ACPI patches(Should help more people get Hackintosh working).
 
-## Update(25/03):
-1) Update kext to latest stable.
-2) OC 0.6.7
-3) Added battery-performance optimisation.
-4) Fix offset for Core(OP).
 
 ## BROKEN:
 1) Airdrop
+2) Sleep at times causes Kernel Panic.
 
 ## Unlock CFG Lock(BIOS 304/307):
 Note: This works only on Asus Zenbook UX391 Bios version 304/307. If you have any other model use this [Guide](https://dortania.github.io/OpenCore-Install-Guide/extras/msr-lock.html)
